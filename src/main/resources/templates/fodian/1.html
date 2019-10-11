@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-cn"  xmlns:th="http://www.thymeleaf.org" >
+<head th:include="common/header :: head('丑女')" />
+<body>
+<header th:include="common/header :: navbar" />
+<div class="container">
+    <ol class="breadcrumb">
+        <li><a th:href="@{/}">首页</a></li>
+        <li><a th:href="@{/fodian/index}">佛典故事</a></li>
+        <li class="active">丑女</li>
+    </ol>
+    <h1 class="text-center">丑女</h1>
+    <article class="panel-body text-muted">
+        <p class="lead">波斯匿王有一位女儿，</p>
+    </article>
+    <nav aria-label="">
+        <ul class="pager">
+            <li class="next"><a th:href="@{/fodian/view/2}"><span class="glyphicon glyphicon-fast-forward"></span></a></li>
+        </ul>
+    </nav>
+</div>
+<footer th:include="common/footer :: footer" />
+</body>
+</html>

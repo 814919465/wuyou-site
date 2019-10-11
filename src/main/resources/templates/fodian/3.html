@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-cn"  xmlns:th="http://www.thymeleaf.org" >
+<head th:include="common/header :: head('孝养父母——佛于忉利天上位母摩耶夫人说法缘')" />
+<body>
+<header th:include="common/header :: navbar" />
+<div class="container">
+    <ol class="breadcrumb">
+        <li><a th:href="@{/}">首页</a></li>
+        <li><a th:href="@{/fodian/index}">佛典故事</a></li>
+        <li class="active">孝养父母——佛于忉利天上位母摩耶夫人说法缘</li>
+    </ol>
+    <h1 class="text-center">孝养父母——佛于忉利天上位母摩耶夫人说法缘</h1>
+    <article class="panel-body text-muted">
+        <p class="lead">波斯匿王有一位女儿，</p>
+    </article>
+    <nav aria-label="">
+        <ul class="pager">
+            <li class="previous"><a th:href="@{/fodian/view/2}"><span class="glyphicon glyphicon-fast-backward"></span></a></li>
+            <li class="next"><a th:href="@{/fodian/view/4}"><span class="glyphicon glyphicon-fast-forward"></span></a></li>
+        </ul>
+    </nav>
+</div>
+<footer th:include="common/footer :: footer" />
+</body>
+</html>

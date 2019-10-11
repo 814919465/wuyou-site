@@ -1,10 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>首页</title>
-</head>
+<html lang="zh-cn"  xmlns:th="http://www.thymeleaf.org" >
+<head th:include="common/header :: head('无忧健康咨询网')" />
 <body>
-欢迎来到无忧健康网站
+<header th:include="common/header :: navbar"/>
+
+<div class="container">
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">这文里是正部分</h3>
+            </div>
+            <div class="panel-body">
+                这文里是正部分这文里是正部分这文里是正部分
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">这文里是正部分</h3>
+            </div>
+            <div class="panel-body">
+                这文里是正部分这文里是正部分这文里是正部分这文里是正部分
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Panel title</h3>
+            </div>
+            <div class="panel-body">
+                Panel content
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer th:include="common/footer :: footer" />
 </body>
 </html>

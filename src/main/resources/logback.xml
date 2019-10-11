@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="false" scanPeriod="60 seconds" debug="false">
+    <property name="APP_NAME" value="wy-site"></property> <!-- 定义日志文件名称 -->
+    <property name="LOG_HOME" value="/logs/service/${APP_NAME}" /> <!-- 定义日志的根目录 -->
+
+    <!-- ch.qos.logback.core.ConsoleAppender 表示输出 到 控制台  -->
+    <appender name="console_out" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+
+    <!-- ch.qos.logback.core.rolling.RollingFileAppender  表示输出到文件 -->
+    <appender name="file_out" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_HOME}/wx-${APP_NAME}.log</file> <!-- 指定日志文件的名称 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_HOME}/${APP_NAME}-%d{yyyy-MM-dd}.log-%i</fileNamePattern>
+            <MaxHistory>365</MaxHistory>
+            <timeBasedFileNamingAndTriggeringPolicy
+                class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>200MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}[%thread]-[%-5level][%logger{50}:%line ]-%msg%n</pattern>
+        </encoder>
+    </appender>
+    
+    <root level="info">
+        <appender-ref ref="console_out" />
+        <appender-ref ref="file_out" />
+    </root>
+
+
+</configuration> 
