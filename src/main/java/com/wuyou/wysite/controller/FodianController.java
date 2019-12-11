@@ -17,7 +17,7 @@ public class FodianController {
      */
     @GetMapping("/index")
     public ModelAndView index(){
-        return new ModelAndView("/fodian/index");
+        return new ModelAndView("fodian/index");
     }
 
     /**
@@ -27,6 +27,6 @@ public class FodianController {
      */
     @GetMapping("/view/{index}")
     public ModelAndView view(@PathVariable String index){
-        return new ModelAndView("/fodian/" + index);
+        return new ModelAndView("fodian/" + index);
     }
 }
