@@ -37,6 +37,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
             <scope>runtime</scope>
         </dependency>
         <dependency>
@@ -51,6 +52,9 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
+
+
+
     </dependencies>
 
 
@@ -59,6 +63,10 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <executable>true</executable>
+                    <fork>true</fork>
+                </configuration>
             </plugin>
         </plugins>
     </build>
